@@ -1,0 +1,54 @@
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.doctorCon {
+  padding-left: 12px;
+  line-height: 32px;
+  p {
+    &:first-of-type {
+      span {
+        &:first-of-type {
+          font-weight: bold;
+          font-size: 20px;
+          margin-right: 10px;
+        }
+        &:nth-of-type(2) {
+          display: inline-block;
+          color: #1aad19;
+          border: none;
+          position: relative;
+          padding: 0 8px;
+          font-size: 14px;
+          // &:after {
+          //   content: '';
+          //   position: absolute;
+          //   top: -2px;
+          //   left: 0;
+          //   border: 1px solid #1aad19;
+          //   border-radius: 8px;
+          //   width: 200%;
+          //   height: 200%;
+          //   transform: scale(0.5);
+          //   transform-origin: left top;
+          // }
+        }
+      }
+    }
+  }
+  .more {
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    width: 4.5rem;
+  }
+}
+
+.linkText {
+  &:link, &:visited, &:hover, &:active {
+    color: #666;
+  }
+}
