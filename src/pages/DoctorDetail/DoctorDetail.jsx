@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import avatarURL from '@/assets/img/avatar.jpg';
+import API from '@/api/api';
 // import TouchOpacity from '@/components/TouchOpacity/TouchOpacity';
 import { Article, Page } from 'react-weui';
 import './doctorDetail.scss';
