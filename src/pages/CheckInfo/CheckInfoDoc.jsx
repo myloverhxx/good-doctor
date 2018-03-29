@@ -29,7 +29,7 @@ export default class CheckInfoDoc extends Component {
   render() {
     return (
       <div>
-        <Form>
+        <Form className="checkinfo">
           <FormCell>
             <CellHeader>
               <Label>姓名：</Label>

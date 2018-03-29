@@ -18,7 +18,7 @@ export default class ViewList extends Component {
   }
 
   openDetail = () => {
-    console.log(this.props.data.name)
+    
   }
 
   render(){

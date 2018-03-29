@@ -2,30 +2,22 @@ import React, { Component } from 'react';
 import { is, fromJS } from 'immutable';
 import { InfiniteLoader } from 'react-weui';
 import ViewList from '@/components/ViewList/ViewList';
-import Filter from '@/components/Filter/Filter';
 import API from '@/api/api';
-import './doctorList.scss';
+import './myFollow.scss';
 
-export default class DoctorList extends Component {
+export default class MyFollow extends Component {
 
   state = {
     doctorsList: [],
     pageNum: 1,
-    deptName: '',
-    title: '',
     total: 0
   }
 
   // 初始化数据
   initData = async () => {
-    let data = {
-      pageNum: this.state.pageNum,
-      deptName: this.state.deptName,
-      title: this.state.title
-    }
-    
     try {
-      let res = await API.getDoctorList(data);
+      let res = await API.getFollowList(this.state.pageNum);
+      console.log(res)
       this.setState({
         doctorsList: res.records,
         total: res.total
@@ -46,8 +38,7 @@ export default class DoctorList extends Component {
 
   render(){
     return (
-      <div className="doctorList">
-       <Filter />
+      <div className="followList">
         <InfiniteLoader
           onLoadMore={ (resolve, finish) => {
             setTimeout( ()=> {

@@ -17,6 +17,7 @@ export default class Filter extends Component {
     return (
       <div className="filterBar">
         <TouchOpacity clickCallBack={this.openDept} body={<p>科室</p>} />
+        
         <TouchOpacity clickCallBack={this.openTitle} body={<p>职称</p>} />
       </div>
     )
